@@ -1,0 +1,158 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com</groupId>
+	<artifactId>NewTestApp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<name>NewTestApp</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.4.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.0-beta1</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- if you are trying to run it on localhost you should comment the exclusions 
+				below and remove the comments for the annotations in MdgSimulatorApiApplicationTests -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.17-beta1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.cloud</groupId>
+			<artifactId>neo-java-web-maven-plugin</artifactId>
+			<version>2.62.3.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.cloud</groupId>
+			<artifactId>neo-java-web-api</artifactId>
+			<version>1.133.4</version>
+			<scope>provided</scope>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.sap.cloud</groupId> -->
+<!-- 			<artifactId>neo-javaee6-wp-sdk</artifactId> -->
+<!-- 			<version>2.25.7</version> -->
+<!-- 			<scope>provided</scope> -->
+<!-- 		</dependency> -->
+
+		<!-- <dependency> -->
+		<!-- <groupId>com.sap.cloud</groupId> -->
+		<!-- <artifactId>neo-java-web-sdk</artifactId> -->
+		<!-- <version>1.103.15.2</version> -->
+		<!-- <type>zip</type> -->
+		<!-- <scope>provided</scope> -->
+		<!-- <exclusions> -->
+		<!-- <exclusion> -->
+		<!-- <artifactId>*</artifactId> -->
+		<!-- <groupId>*</groupId> -->
+		<!-- </exclusion> -->
+		<!-- </exclusions> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.sap.cloud</groupId> -->
+		<!-- <artifactId>neo-java-web-api</artifactId> -->
+		<!-- <version>1.103.15.2</version> -->
+		<!-- <scope>provided</scope> -->
+		<!-- <exclusions> -->
+		<!-- <exclusion> -->
+		<!-- <artifactId>persistence-api</artifactId> -->
+		<!-- <groupId>javax.persistence</groupId> -->
+		<!-- </exclusion> -->
+		<!-- </exclusions> -->
+		<!-- </dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.sap.core.connectivity.httpdestination</groupId> -->
+<!-- 			<artifactId>com.sap.core.connectivity.api</artifactId> -->
+<!-- 			<version>0.9.198</version> -->
+<!-- 			<scope>provided</scope> -->
+<!-- 		</dependency> -->
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
